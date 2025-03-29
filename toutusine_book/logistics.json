@@ -2,7 +2,8 @@
   "index": 2,
   "blueprint": {
     "item": "blueprint",
-    "label": "Sushifluide & misc",
+    "label": "logistics",
+    "description": "This is the part about logistics.\nIt should be linked in Yellow with the factory part to manage the sushi-fluids system. The logistic network should also be linked with the factories part.\nIt's also linked in Red and Green to the logics, to manage requests and needs. As this is this part that is directly linked to the \"exterior\": reading requests and stocks of the logistic system and also orbital requests. These requests are transmitted to the logic part using Red and Green connections.\n",
     "shift_x": -196,
     "shift_y": -179,
     "version": 562949954797573,
@@ -490,7 +491,7 @@
             "output_signal": {"name": "signal-each", "type": "virtual"}
           }
         },
-        "position": {"x": 114, "y": 14.5}
+        "position": {"x": 108, "y": 10.5}
       },
       {"name": "big-electric-pole", "position": {"x": 5, "y": -1}},
       {"name": "big-electric-pole", "position": {"x": 12, "y": -2}},
@@ -515,13 +516,13 @@
       {"name": "big-electric-pole", "position": {"x": 45, "y": 15}},
       {"name": "big-electric-pole", "position": {"x": 63, "y": 4}},
       {"name": "big-electric-pole", "position": {"x": 60, "y": 34}},
-      {"name": "big-electric-pole", "position": {"x": 83, "y": 28}},
-      {"name": "big-electric-pole", "position": {"x": 100, "y": 20}},
+      {"name": "big-electric-pole", "position": {"x": 94, "y": 16}},
+      {"name": "big-electric-pole", "position": {"x": 107, "y": 16}},
       {"name": "big-electric-pole", "position": {"x": 113, "y": 30}},
       {"name": "big-electric-pole", "position": {"x": 115, "y": 30}},
-      {"name": "bulk-inserter", "direction": 4, "position": {"x": 113.5, "y": 13.5}},
-      {"name": "bulk-inserter", "direction": 4, "position": {"x": 103.5, "y": 16.5}},
-      {"name": "bulk-inserter", "direction": 4, "position": {"x": 108.5, "y": 16.5}},
+      {"name": "bulk-inserter", "direction": 4, "position": {"x": 97.5, "y": 12.5}},
+      {"name": "bulk-inserter", "direction": 4, "position": {"x": 102.5, "y": 12.5}},
+      {"name": "bulk-inserter", "direction": 4, "position": {"x": 107.5, "y": 9.5}},
       {
         "name": "constant-combinator",
         "direction": 4,
@@ -1055,6 +1056,18 @@
       {
         "name": "constant-combinator",
         "direction": 4,
+        "control_behavior": {"is_on": false, "sections": null},
+        "position": {"x": 93.5, "y": 13.5}
+      },
+      {
+        "name": "constant-combinator",
+        "direction": 4,
+        "control_behavior": {"is_on": false, "sections": null},
+        "position": {"x": 94.5, "y": 13.5}
+      },
+      {
+        "name": "constant-combinator",
+        "direction": 4,
         "control_behavior": {
           "sections": {
             "sections": [
@@ -1068,19 +1081,7 @@
             ]
           }
         },
-        "position": {"x": 114.5, "y": 15.5}
-      },
-      {
-        "name": "constant-combinator",
-        "direction": 4,
-        "control_behavior": {"is_on": false, "sections": null},
-        "position": {"x": 99.5, "y": 17.5}
-      },
-      {
-        "name": "constant-combinator",
-        "direction": 4,
-        "control_behavior": {"is_on": false, "sections": null},
-        "position": {"x": 100.5, "y": 17.5}
+        "position": {"x": 108.5, "y": 11.5}
       },
       {
         "name": "decider-combinator",
@@ -2138,7 +2139,7 @@
           ]
         },
         "icon": {"name": "red-wire"},
-        "position": {"x": 99.5, "y": 18.5}
+        "position": {"x": 93.5, "y": 14.5}
       },
       {
         "name": "display-panel",
@@ -2154,7 +2155,7 @@
           ]
         },
         "icon": {"name": "green-wire"},
-        "position": {"x": 100.5, "y": 18.5}
+        "position": {"x": 94.5, "y": 14.5}
       },
       {
         "name": "ee-infinity-pipe",
@@ -2486,8 +2487,6 @@
       {"name": "pipe-to-ground", "direction": 12, "position": {"x": 109.5, "y": 2.5}},
       {"name": "pipe-to-ground", "direction": 4, "position": {"x": 112.5, "y": 2.5}},
       {"name": "pipe-to-ground", "direction": 12, "position": {"x": 120.5, "y": 2.5}},
-      {"name": "pipe-to-ground", "direction": 8, "position": {"x": 67.5, "y": 40.5}},
-      {"name": "pipe-to-ground", "position": {"x": 67.5, "y": 41.5}},
       {
         "name": "pump",
         "direction": 4,
@@ -3003,24 +3002,18 @@
       {
         "name": "requester-chest",
         "control_behavior": {"circuit_condition_enabled": false, "circuit_mode_of_operation": 1},
-        "position": {"x": 114.5, "y": 13.5},
+        "position": {"x": 108.5, "y": 9.5},
         "request_filters": {"sections": [{"index": 1}]}
       },
       {
         "name": "roboport",
         "control_behavior": {"read_items_mode": 2},
-        "position": {"x": 80, "y": 27},
+        "position": {"x": 95, "y": 11},
         "request_filters": {"sections": [{"index": 1}]}
       },
       {
         "name": "roboport",
-        "control_behavior": {"read_items_mode": 2},
-        "position": {"x": 101, "y": 15},
-        "request_filters": {"sections": [{"index": 1}]}
-      },
-      {
-        "name": "roboport",
-        "position": {"x": 106, "y": 15},
+        "position": {"x": 100, "y": 11},
         "request_filters": {"sections": [{"index": 1}]}
       },
       {
@@ -3033,8 +3026,83 @@
           "total_construction_output_signal": {"name": "construction-robot"},
           "total_logistic_output_signal": {"name": "logistic-robot"}
         },
-        "position": {"x": 111, "y": 15},
+        "position": {"x": 105, "y": 11},
         "request_filters": {"sections": [{"index": 1}]}
+      },
+      {
+        "name": "rocket-silo",
+        "recipe": "rocket-part",
+        "recipe_quality": "normal",
+        "transitional_request_index": 0,
+        "control_behavior": {"read_items_mode": 2},
+        "position": {"x": 100.5, "y": 20.5},
+        "request_filters": {"request_from_buffers": true, "sections": [{"active": false, "index": 1}]}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 1, "r": 0},
+        "position": {"x": 112.5, "y": -0.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 1, "r": 1},
+        "position": {"x": 16.5, "y": 11.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 1, "r": 1},
+        "position": {"x": 43.5, "y": 14.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 1, "r": 1},
+        "position": {"x": 46.5, "y": 15.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 1, "r": 1},
+        "position": {"x": 60.5, "y": 32.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 0, "r": 1},
+        "position": {"x": 93.5, "y": 17.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 1, "r": 0},
+        "position": {"x": 106.5, "y": 17.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 1, "r": 0},
+        "position": {"x": 113.5, "y": 28.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 0, "r": 1},
+        "position": {"x": 115.5, "y": 28.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 1, "r": 0},
+        "position": {"x": 112.5, "y": 31.5}
+      },
+      {
+        "name": "small-lamp",
+        "always_on": true,
+        "color": {"a": 1, "b": 0, "g": 0, "r": 1},
+        "position": {"x": 114.5, "y": 31.5}
       },
       {"name": "storage-tank", "position": {"x": 8.5, "y": -0.5}},
       {"name": "storage-tank", "direction": 4, "position": {"x": 38.5, "y": -5.5}},
@@ -3070,7 +3138,7 @@
       {"name": "storage-tank", "position": {"x": 115.5, "y": -2.5}},
       {"name": "storage-tank", "direction": 4, "position": {"x": 118.5, "y": -2.5}},
       {"name": "substation", "position": {"x": 95, "y": -13}},
-      {"name": "substation", "position": {"x": 105, "y": 18}}
+      {"name": "substation", "position": {"x": 99, "y": 14}}
     ],
     "icons": [{"index": 1, "signal": {"name": "storage-tank"}}],
     "wires": [
@@ -3528,6 +3596,7 @@
       ["106.5,14.5", 5, "106,18", 5],
       ["109,14", 1, "112,14", 1],
       ["117.5,14.5", 1, "120,14", 1],
+      ["117.5,14.5", 1, "117,16", 1],
       ["117.5,14.5", 1, "117.5,46.5", 1],
       ["117.5,14.5", 5, "110,17", 5],
       ["117.5,14.5", 5, "121,17", 5],
@@ -3650,30 +3719,49 @@
       ["6.5,20", 1, "8.5,20", 3],
       ["6.5,20", 4, "8.5,20", 4],
       ["67.5,20.5", 5, "49.5,31.5", 5],
-      ["67.5,20.5", 5, "87.5,44.5", 5],
+      ["113,26", 1, "112.5,27", 3],
+      ["112.5,27", 2, "109.5,27.5", 2],
+      ["112.5,27", 3, "113,28", 1],
+      ["19.5,27.5", 1, "21,28", 1],
       ["19.5,27.5", 1, "49.5,31.5", 1],
+      ["19.5,27.5", 2, "21,28", 2],
       ["19.5,27.5", 2, "49.5,31.5", 2],
       ["19.5,27.5", 5, "49.5,31.5", 5],
-      ["119,30", 1, "118.5,31", 3],
-      ["118.5,31", 2, "115.5,31.5", 2],
-      ["118.5,31", 3, "119,32", 1],
+      ["99.5,27.5", 1, "98.5,32.5", 1],
+      ["104.5,27.5", 2, "98.5,32.5", 2],
+      ["48,31", 1, "49.5,31.5", 1],
+      ["48,31", 2, "49.5,31.5", 2],
+      ["98,30", 1, "98,31", 1],
+      ["98,31", 1, "98.5,32.5", 1],
+      ["99,30", 2, "99,31", 2],
+      ["99,31", 2, "98.5,32.5", 2],
+      ["103.5,30.5", 5, "98.5,32.5", 5],
+      ["103.5,30.5", 5, "111.5,32.5", 5],
+      ["49.5,31.5", 1, "51,32", 1],
       ["49.5,31.5", 1, "64.5,50.5", 1],
+      ["49.5,31.5", 2, "51,32", 2],
       ["49.5,31.5", 2, "64.5,50.5", 2],
       ["49.5,31.5", 5, "64.5,50.5", 5],
-      ["105.5,31.5", 1, "104.5,36.5", 1],
-      ["110.5,31.5", 2, "104.5,36.5", 2],
-      ["104,34", 1, "104,35", 1],
-      ["104,35", 1, "104.5,36.5", 1],
-      ["105,34", 2, "105,35", 2],
-      ["105,35", 2, "104.5,36.5", 2],
-      ["109.5,34.5", 5, "104.5,36.5", 5],
-      ["109.5,34.5", 5, "119.5,46.5", 5],
-      ["104.5,36.5", 1, "119.5,46.5", 1],
-      ["104.5,36.5", 2, "119.5,46.5", 2],
-      ["104.5,36.5", 5, "87.5,44.5", 5],
-      ["104.5,36.5", 5, "117.5,46.5", 5],
-      ["87.5,44.5", 5, "64.5,50.5", 5],
-      ["117.5,46.5", 5, "119.5,46.5", 5]
+      ["98.5,32.5", 1, "98,34", 1],
+      ["98.5,32.5", 1, "119.5,46.5", 1],
+      ["98.5,32.5", 2, "98,34", 2],
+      ["98.5,32.5", 2, "119.5,46.5", 2],
+      ["98.5,32.5", 5, "117.5,46.5", 5],
+      ["111.5,32.5", 2, "111,34", 2],
+      ["111.5,32.5", 2, "105,37", 2],
+      ["111.5,32.5", 2, "117.5,46.5", 2],
+      ["111.5,32.5", 5, "117.5,46.5", 5],
+      ["118,45", 1, "117.5,46.5", 1],
+      ["118,45", 2, "117.5,46.5", 2],
+      ["120,45", 1, "119.5,46.5", 1],
+      ["120,45", 2, "119.5,46.5", 2],
+      ["117.5,46.5", 1, "117,48", 1],
+      ["117.5,46.5", 2, "117,48", 2],
+      ["117.5,46.5", 5, "119.5,46.5", 5],
+      ["119.5,46.5", 1, "119,48", 1],
+      ["119.5,46.5", 2, "119,48", 2],
+      ["65,49", 1, "64.5,50.5", 1],
+      ["65,49", 2, "64.5,50.5", 2]
     ]
   }
 }
