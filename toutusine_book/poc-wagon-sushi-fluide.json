@@ -1,0 +1,170 @@
+{
+  "index": 8,
+  "blueprint": {
+    "item": "blueprint",
+    "label": "poc wagon sushi fluide",
+    "shift_x": -55,
+    "shift_y": -151,
+    "version": 562949954797573,
+    "entities": [
+      {
+        "name": "constant-combinator",
+        "control_behavior": {
+          "sections": {
+            "sections": [
+              {
+                "active": false,
+                "index": 1,
+                "filters": [
+                  {
+                    "name": "signal-I",
+                    "comparator": "=",
+                    "count": 1,
+                    "index": 1,
+                    "quality": "normal",
+                    "type": "virtual"
+                  }
+                ]
+              },
+              {
+                "active": false,
+                "index": 2,
+                "filters": [
+                  {
+                    "name": "signal-O",
+                    "comparator": "=",
+                    "count": 1,
+                    "index": 1,
+                    "quality": "normal",
+                    "type": "virtual"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "position": {"x": 3.5, "y": -0.5}
+      },
+      {
+        "name": "fluid-wagon",
+        "enable_logistics_while_moving": false,
+        "orientation": 0,
+        "position": {"x": -12, "y": 12}
+      },
+      {
+        "name": "fluid-wagon",
+        "enable_logistics_while_moving": false,
+        "orientation": 0,
+        "position": {"x": 0, "y": 6}
+      },
+      {"name": "pipe", "position": {"x": -3.5, "y": 7.5}},
+      {"name": "pipe", "position": {"x": -8.5, "y": 9.5}},
+      {"name": "pipe", "position": {"x": -8.5, "y": 10.5}},
+      {"name": "pipe", "position": {"x": -15.5, "y": 13.5}},
+      {"name": "pipe", "position": {"x": -15.5, "y": 14.5}},
+      {"name": "pipe", "position": {"x": -6.5, "y": 8.5}},
+      {"name": "pipe", "position": {"x": -6.5, "y": 9.5}},
+      {"name": "pipe", "position": {"x": -5.5, "y": 8.5}},
+      {"name": "pipe", "position": {"x": -4.5, "y": 8.5}},
+      {"name": "pipe", "position": {"x": -7.5, "y": 10.5}},
+      {"name": "pipe", "position": {"x": -6.5, "y": 10.5}},
+      {"name": "pipe", "position": {"x": -3.5, "y": 8.5}},
+      {"name": "pipe", "position": {"x": 3.5, "y": 3.5}},
+      {"name": "pipe", "position": {"x": 3.5, "y": 4.5}},
+      {
+        "name": "pump",
+        "direction": 4,
+        "control_behavior": {
+          "circuit_enabled": true,
+          "circuit_condition": {"comparator": ">", "constant": 0, "first_signal": {"name": "signal-O", "type": "virtual"}}
+        },
+        "position": {"x": -2, "y": 7.5}
+      },
+      {
+        "name": "pump",
+        "direction": 4,
+        "control_behavior": {
+          "circuit_enabled": true,
+          "circuit_condition": {"comparator": ">", "constant": 0, "first_signal": {"name": "signal-O", "type": "virtual"}}
+        },
+        "position": {"x": -10, "y": 9.5}
+      },
+      {
+        "name": "pump",
+        "direction": 12,
+        "control_behavior": {
+          "circuit_enabled": true,
+          "circuit_condition": {"comparator": "=", "constant": 0, "first_signal": {"name": "signal-I", "type": "virtual"}}
+        },
+        "position": {"x": -10, "y": 10.5}
+      },
+      {
+        "name": "pump",
+        "direction": 4,
+        "control_behavior": {
+          "circuit_condition": {"comparator": "=", "constant": 0, "first_signal": {"name": "signal-O", "type": "virtual"}}
+        },
+        "position": {"x": -14, "y": 13.5}
+      },
+      {
+        "name": "pump",
+        "direction": 12,
+        "control_behavior": {
+          "circuit_enabled": true,
+          "circuit_condition": {"comparator": ">", "constant": 0, "first_signal": {"name": "signal-I", "type": "virtual"}}
+        },
+        "position": {"x": -14, "y": 14.5}
+      },
+      {
+        "name": "pump",
+        "direction": 12,
+        "control_behavior": {
+          "circuit_enabled": true,
+          "circuit_condition": {"comparator": "=", "constant": 0, "first_signal": {"name": "signal-I", "type": "virtual"}}
+        },
+        "position": {"x": -2, "y": 8.5}
+      },
+      {
+        "name": "pump",
+        "direction": 4,
+        "control_behavior": {
+          "circuit_enabled": true,
+          "circuit_condition": {"comparator": ">", "constant": 0, "first_signal": {"name": "signal-O", "type": "virtual"}}
+        },
+        "position": {"x": 2, "y": 3.5}
+      },
+      {
+        "name": "pump",
+        "direction": 12,
+        "control_behavior": {
+          "circuit_enabled": true,
+          "circuit_condition": {"comparator": ">", "constant": 0, "first_signal": {"name": "signal-I", "type": "virtual"}}
+        },
+        "position": {"x": 2, "y": 4.5}
+      },
+      {"name": "straight-rail", "position": {"x": -12, "y": 10}},
+      {"name": "straight-rail", "position": {"x": -12, "y": 12}},
+      {"name": "straight-rail", "position": {"x": -12, "y": 14}},
+      {"name": "straight-rail", "position": {"x": 0, "y": 4}},
+      {"name": "straight-rail", "position": {"x": 0, "y": 6}},
+      {"name": "straight-rail", "position": {"x": 0, "y": 8}},
+      {"name": "substation", "position": {"x": -11, "y": 7}},
+      {"name": "substation", "position": {"x": 0, "y": 1}}
+    ],
+    "icons": [{"index": 1, "signal": {"name": "rail"}}, {"index": 2, "signal": {"name": "pump"}}],
+    "stock_connections": [{"stock": "15.5,6.5,9e74"}, {"stock": "3.5,12.5,9e74"}],
+    "wires": [
+      ["19,0", 2, "17.5,4", 2],
+      ["15.5,1.5", 5, "4.5,7.5", 5],
+      ["17.5,5", 2, "17.5,4", 2],
+      ["17.5,5", 2, "13.5,9", 2],
+      ["17.5,4", 2, "13.5,8", 2],
+      ["13.5,9", 2, "13.5,8", 2],
+      ["13.5,9", 2, "5.5,11", 2],
+      ["5.5,11", 2, "5.5,10", 2],
+      ["5.5,11", 2, "1.5,15", 2],
+      ["5.5,10", 2, "1.5,14", 2],
+      ["1.5,15", 2, "1.5,14", 2]
+    ]
+  }
+}
